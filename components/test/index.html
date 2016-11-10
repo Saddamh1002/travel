@@ -1,0 +1,12 @@
+<div class="container">
+
+    <uib-tabset ng-init="indextab = 1" Booking="true" model>
+        <uib-tab class="active" index="1" heading="Home" ui-sref=".home"></uib-tab>
+        <uib-tab index="2" heading="Step1" ui-sref=".step-one"></uib-tab>
+        <uib-tab index="3" heading="Step2" ui-sref=".step-two"></uib-tab>
+        <uib-tab index="4" heading="Step3" ui-sref=".step-three"></uib-tab>
+    </uib-tabset>
+
+    <hr/>
+    <ui-view></ui-view>
+</div>

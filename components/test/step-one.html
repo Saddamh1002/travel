@@ -1,0 +1,59 @@
+<div class="container">
+    <form class="jumbotron" name="userForm" id="form-one" ng-submit="submitForm()" novalidate>
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <label for="first-name" class="col-sm-3 control-label">First Name</label>
+                <div class="col-sm-9">
+                    <input type="text" id="first-name"name="frstname" placeholder="First Name" class="form-control" ng-model="fname" autofocus>
+                    <span class="text-error"  ng-show="userForm.frstname.$error.pattern">Enter a valid name.</span>
+                    <span class="text-error" ng-show="userForm.frstname.$dirty && userForm.frstname.$invalid">
+                        <span class="text-danger" ng-show="userForm.frstname.$error.required">Name is required.</span>
+                    </span><br>
+                </div>
+            </div>
+        </div><br><br><br>
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <label for="last-name" class="col-sm-3 control-label">Last Name</label>
+                <div class="col-sm-9">
+                    <input type="text" id="last-name" name="lastName" placeholder="Last Name" class="form-control" ng-model="lname"  ng-pattern="/^[a-zA-Z/ ]*$/" autofocus>
+                    <span class="text-error" ng-show="userForm.lastName.$touched && userForm.lastName.$invalid">
+                           Enter a valid Name.
+                    </span><br>
+                </div>
+            </div>
+        </div><br><br><br>
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email Id</label>
+                <div class="col-sm-9">
+                    <input type="email" id="email" placeholder="Email" name="email" ng-model="eid" ng-pattern="^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.(?:[A-Z]{2,}|com|org))*$"
+                           required class="form-control">
+                    <span class="text-error" ng-show="userForm.email.$touched && userForm.email.$invalid">
+                        Enter a valid email.
+                    </span><br>
+                </div>
+            </div>
+        </div><br><br><br>
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <label for="mobile" class="col-sm-3 control-label">Phone No</label>
+                <div class="col-sm-9">
+                    <input type="text" id="mobile" placeholder="Mobile No" name="ContactNo" ng-model="mobile" class="form-control"  ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/"  maxlength="10">
+                    <span class="text-error" ng-show="userForm.ContactNo.$touched && userForm.ContactNo.$invalid">
+                            Enter a valid contact number
+                    </span><br>
+                </div>
+            </div>
+        </div><br><br><br>
+        <div class="form-group row" style="height: 60px; margin-bottom: 0px;">
+            <div class="col-xs-offset-4 col-sm-offset-5 col-md-offset-6  col-md-offset-5">
+                <button value="submit" class="btn-effect btn active" ui-sref="app.test.step-two"
+                     ng-click="firstForm(fname, lname, eid, mobile)"> Go Next
+                    <span class="glyphicons glyphicons-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+</div>

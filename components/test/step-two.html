@@ -1,0 +1,64 @@
+<div class="container">
+    <form class="jumbotron" name="stepForm" id="form-two">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <label for="location" class="col-sm-3 control-label">Location</label>
+                <div class="col-sm-9">
+                    <select id="location" class="form-control" ng-model="location" placeholder="From To">
+                        <option>India</option>
+                        <option>Afghanistan</option>
+                        <option>Bahamas</option>
+                        <option>Cambodia</option>
+                        <option>Denmark</option>
+                        <option>Ecuador</option>
+                        <option>Fiji</option>
+                        <option>Gabon</option>
+                        <option>Haiti</option>
+                        <option>Bangladesh</option>
+                        <option>Australia</option>
+                        <option>Armenia</option>
+                        <option> Brazil</option>
+                        <option> Republic of Congo</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                        <option>Iran</option>
+                        <option>Indonesia</option>
+                        <option> Kazakhstan</option>
+                        <option>UAE</option>
+                        <option>Poland</option>
+
+
+
+                    </select>
+                </div>
+            </div>
+        </div><br><br><br>
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <label for="date" class="col-sm-3 control-label">Departure Date</label>
+                <div class="col-sm-9">
+                    <input type="date" id="date" class="form-control" ng-model="ddate">
+                </div>
+            </div>
+        </div><br><br><br>
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <label for="return-date" class="col-sm-3 control-label">Return Date</label>
+                <div class="col-sm-9">
+                    <input type="date" id="return-date" class="form-control" ng-model="rdate">
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="form-group row" style="height: 60px; margin-bottom: 2px;">
+            <div class="col-xs-offset-4 col-sm-offset-5 col-md-offset-6  col-md-offset-5">
+                <button class="btn-effect btn active" ui-sref="app.test.step-three"
+                        ng-disabled="stepForm.$invalid" ng-click="finalData(location, ddate, rdate);">
+                    Submit Form <span class="submit-form"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
